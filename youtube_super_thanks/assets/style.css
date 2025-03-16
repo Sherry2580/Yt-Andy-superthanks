@@ -1,0 +1,160 @@
+:root {
+    --muted-pink: #e6c9c9;
+    --muted-blue: #a5b5c1;
+    --muted-green: #b8c5ba;
+    --muted-brown: #c6b5a5;
+    --muted-dark-brown: #8d7b6c;
+    --muted-purple: #bfb6ca;
+    --muted-gray: #d1cfcd;
+    --muted-light-blue: #b6cad4;
+    --muted-dark-blue: #8a9eae;
+    --muted-light-green: #cad4c8;
+    --muted-light-pink: #e5d6d6;
+    --text-black: #000000;
+    --text-dark: #333333;
+    --background-light: #f5f5f5;
+}
+
+body {
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    background-color: var(--background-light);
+    margin: 0;
+    padding: 0;
+    color: var(--text-black);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: var(--text-black);
+}
+
+p, span, div {
+    color: var(--text-black);
+}
+
+.stat-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    text-align: center;
+    min-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.stat-card h2 {
+    color: var(--muted-dark-brown);
+    font-size: 32px;
+    margin: 0;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    margin: 15px 0;
+    padding: 15px;
+}
+
+/* 表格樣式增強 */
+.dash-table-container {
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* 選項卡樣式 */
+.custom-tab {
+    color: var(--text-dark);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--muted-gray);
+    background-color: var(--background-light);
+}
+
+.custom-tab--selected {
+    color: var(--muted-dark-brown);
+    border-left: 1px solid var(--muted-gray);
+    border-right: 1px solid var(--muted-gray);
+    border-top: 3px solid var(--muted-dark-brown);
+    border-bottom: none;
+    background-color: white;
+}
+
+/* Bootstrap覆蓋 */
+.btn-primary {
+    background-color: var(--muted-dark-brown) !important;
+    border-color: var(--muted-dark-brown) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--muted-brown) !important;
+    border-color: var(--muted-brown) !important;
+}
+
+.text-primary {
+    color: var(--muted-dark-brown) !important;
+}
+
+.bg-primary {
+    background-color: var(--muted-dark-brown) !important;
+}
+
+.card-header {
+    background-color: var(--muted-brown) !important;
+    color: var(--text-black) !important;
+}
+
+.navbar-dark {
+    background-color: var(--muted-dark-brown) !important;
+}
+
+/* 表格行樣式 */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table tr:nth-child(odd) {
+    background-color: var(--background-light) !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table tr:nth-child(even) {
+    background-color: white !important;
+}
+
+.dash-header {
+    background-color: var(--muted-brown) !important;
+}
+
+/* 保持表格文字為黑色 */
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table td {
+    color: var(--text-black) !important;
+}
+
+.dash-table-container .dash-spreadsheet-container .dash-spreadsheet-inner table th {
+    color: var(--text-black) !important;
+}
+
+/* 調整 */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .flex-container > div {
+        width: 100% !important;
+    }
+    
+    .stat-card {
+        margin-bottom: 15px;
+    }
+}

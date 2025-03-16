@@ -1,0 +1,6 @@
+selenium
+webdriver-manager
+pandas
+dash
+dash-bootstrap-components
+plotly
