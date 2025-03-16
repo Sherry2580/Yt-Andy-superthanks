@@ -10,6 +10,13 @@
 - 資料庫儲存和查詢功能
 - 網頁展示分析結果
 
+## Result
+Some example pages : 
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
 ## 檔案結構
 
 ```
@@ -74,10 +81,8 @@ python single_video_analysis.py
 
 - **總覽** - 顯示整體統計數據和分析圖表
 - **單一影片分析** - 查看特定影片的超級感謝詳情
-- **資料表格** - 查看完整的影片和超級感謝資料
 
-## 注意事項
+## Notice
 
-- 請確保您的系統已安裝與您Chrome瀏覽器版本相匹配的ChromeDriver
+- 確保你的系統已安裝與您Chrome瀏覽器版本相匹配的ChromeDriver
 - 爬取速度受網絡和目標網站響應速度影響
-- 大量資料抓取可能需要較長時間，請耐心等待

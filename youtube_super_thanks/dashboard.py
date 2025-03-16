@@ -217,7 +217,7 @@ navbar = dbc.NavbarSimple(
     ],
     brand="YouTube 超級感謝統計儀表板",
     brand_href="/",
-    color="#8d7b6c",  # 深咖啡
+    color="#8d7b6c",  # 深咖啡色
     dark=True,
 )
 
@@ -325,7 +325,8 @@ def render_page_content(pathname):
                                 style_header={
                                     'backgroundColor': '#f0f0f0',
                                     'fontWeight': 'bold',
-                                    'fontSize': '16px'
+                                    'fontSize': '16px',
+                                    'color': '#000000'
                                 },
                                 style_data_conditional=[
                                     {'if': {'row_index': 'odd'}, 'backgroundColor': 'rgb(248, 248, 248)'}
@@ -364,14 +365,14 @@ def render_page_content(pathname):
                                 style_header={
                                     'backgroundColor': '#f0f0f0',
                                     'fontWeight': 'bold',
-                                    'fontSize': '16px'
+                                    'fontSize': '16px',
+                                    'color': '#000000'
                                 },
                                 style_data_conditional=[
                                     {'if': {'row_index': 'odd'}, 'backgroundColor': 'rgb(248, 248, 248)'}
                                 ],
                                 page_size=10,
-                                sort_action='native',
-                                filter_action='native',
+                                sort_action='native'
                             ),
                             html.Div([
                                 dbc.Button("查看詳細", id="view-details-btn", color="primary", className="mt-3"),
@@ -536,14 +537,12 @@ def update_video_analysis(n_clicks, video_id):
                     {'name': '金額', 'id': 'amount', 'type': 'numeric', 'format': {'specifier': '.2f'}},
                     {'name': '台幣金額', 'id': 'amount_twd', 'type': 'numeric', 'format': {'specifier': '.2f'}},
                     {'name': '評論者', 'id': 'commenter_name'},
-                    {'name': '評論內容', 'id': 'comment_text'},
-                    {'name': '日期', 'id': 'comment_date'}
                 ],
                 style_table={'overflowX': 'auto'},
                 style_cell={
                     'fontSize': '14px',
                     'padding': '8px',
-                    'textAlign': 'left',
+                    'textAlign': 'right',
                     'whiteSpace': 'normal',
                     'height': 'auto',
                     'maxWidth': '300px',
@@ -551,14 +550,13 @@ def update_video_analysis(n_clicks, video_id):
                     'textOverflow': 'ellipsis'
                 },
                 style_cell_conditional=[
-                    {'if': {'column_id': 'comment_text'}, 'width': '30%'},
-                    {'if': {'column_id': 'amount'}, 'textAlign': 'right'},
-                    {'if': {'column_id': 'amount_twd'}, 'textAlign': 'right'}
+                    {'if': {'column_id': 'commenter_name'}, 'textAlign': 'left'}
                 ],
                 style_header={
                     'backgroundColor': '#f0f0f0',
                     'fontWeight': 'bold',
-                    'fontSize': '16px'
+                    'fontSize': '16px',
+                    'color': '#000000'
                 },
                 style_data_conditional=[
                     {
@@ -567,8 +565,7 @@ def update_video_analysis(n_clicks, video_id):
                     }
                 ],
                 page_size=15,
-                sort_action='native',
-                filter_action='native'
+                sort_action='native'
             )
         ])
     ], className="mb-4 shadow")
